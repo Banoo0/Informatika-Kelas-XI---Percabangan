@@ -184,12 +184,71 @@ table.ops code{font-family:var(--mono);background:var(--surface-2);padding:2px 6
 footer{padding:36px 0 48px;border-top:1px solid var(--line);color:var(--muted);font-size:.95rem}
 footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between}
 
+/* konsep percabangan */
+.sub-h{font-size:1.5rem;margin:64px 0 8px}
+.sub-p{color:var(--muted);margin-bottom:20px;max-width:46em}
+code{font-family:var(--mono);font-size:.92em;background:var(--surface-2);padding:1px 6px;border-radius:6px}
+.mist{margin-top:22px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.mist div{background:var(--surface);border:2px solid var(--ink);border-radius:var(--r-md);padding:16px 18px}
+.mist b{display:block;margin-bottom:4px;font-family:var(--display)}
+.mist span{color:var(--muted);font-size:.95rem}
+.lab{display:grid;grid-template-columns:1.05fr .95fr;gap:26px;align-items:start}
+.seg{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.seg button{font:700 .93rem var(--body);padding:8px 16px;border-radius:999px;border:2px solid var(--ink);background:var(--surface);color:var(--ink);cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--surface)}
+.rng-label{display:flex;justify-content:space-between;align-items:center;font-weight:600;margin-bottom:4px}
+.rng-label b{font-family:var(--mono);background:var(--hi);color:var(--hi-ink);padding:1px 12px;border-radius:8px;border:2px solid var(--ink)}
+.rng{width:100%;accent-color:var(--accent);height:34px;margin:0}
+.flow{margin-top:18px}
+.fnode{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:10px;align-items:center;padding:6px 0}
+.fcond{display:flex;align-items:center;gap:10px;background:var(--surface);border:2px solid var(--ink);border-radius:12px;padding:10px 14px;font:600 .88rem var(--mono)}
+.fcond::before{content:"";width:12px;height:12px;background:var(--accent);transform:rotate(45deg);border-radius:2px;flex:none}
+.fyes{font:700 .8rem var(--body);color:var(--muted)}
+.fres{background:var(--surface-2);border:2px dashed var(--line);border-radius:12px;padding:10px 14px;font-size:.92rem}
+.fno{margin-left:24px;border-left:3px dashed var(--line);padding:2px 0 2px 14px;font:700 .78rem var(--body);color:var(--muted);min-height:24px}
+.fstep.benar .fcond{background:var(--hi);color:var(--hi-ink)}
+.fstep.benar .fcond::before{background:var(--hi-ink)}
+.fstep.benar .fres{background:var(--surface);border:2px solid var(--ink);font-weight:700}
+.fstep.benar .fyes{color:var(--ok)}
+.fstep.salah .fcond{opacity:.75}
+.fstep.lewat{opacity:.35}
+.fstep.benar .fno,.fstep.lewat .fno{opacity:.3}
+.verdict{margin-top:16px;padding:14px 16px;border-radius:12px;border:2px solid var(--ink);background:var(--surface);font-size:.95rem}
+.verdict.warn{background:color-mix(in srgb,var(--hi) 35%,var(--surface))}
+.logic{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start}
+.toggles{background:var(--surface);border:2px solid var(--ink);border-radius:var(--r-lg);padding:20px;display:grid;gap:14px}
+.tg{display:flex;align-items:center;justify-content:space-between;gap:12px;font-weight:600;cursor:pointer}
+.tg input{appearance:none;-webkit-appearance:none;width:52px;height:30px;border-radius:999px;border:2px solid var(--ink);background:var(--surface-2);position:relative;cursor:pointer;flex:none;margin:0}
+.tg input::after{content:"";position:absolute;top:3px;left:3px;width:20px;height:20px;border-radius:50%;background:var(--ink);transition:transform .15s}
+.tg input:checked{background:var(--ok)}
+.tg input:checked::after{transform:translateX(22px);background:var(--surface)}
+.res3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.rbox{background:var(--surface);border:2px solid var(--ink);border-radius:14px;padding:14px 8px;text-align:center}
+.rbox code{display:block;background:none;font:600 .85rem var(--mono);margin-bottom:8px}
+.rbox .v{font:800 1.3rem var(--display)}
+.rbox.t{background:color-mix(in srgb,var(--ok) 22%,var(--surface))}.rbox.t .v{color:var(--ok)}
+.rbox.f{background:color-mix(in srgb,var(--bad) 16%,var(--surface))}.rbox.f .v{color:var(--bad)}
+.tq{background:var(--surface);border:2px solid var(--ink);border-radius:var(--r-lg);padding:22px;display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start}
+.tq-top{grid-column:1/-1;display:flex;justify-content:space-between;color:var(--muted);font-weight:600;font-size:.92rem}
+.opts{display:grid;gap:10px}
+.opt{text-align:left;font:600 .98rem var(--body);padding:12px 14px;border-radius:12px;border:2px solid var(--ink);background:var(--surface-2);color:var(--ink);cursor:pointer}
+.opt:hover:not(:disabled){background:var(--hi);color:var(--hi-ink)}
+.opt.right{background:var(--ok);color:var(--accent-ink)}
+.opt.wrong{background:var(--bad);color:var(--accent-ink)}
+.opt:disabled{cursor:default}
+.fb{margin-top:14px;padding:12px 14px;border-left:4px solid var(--hi);background:var(--surface-2);border-radius:0 10px 10px 0;font-size:.95rem}
+.tq .actions{margin-top:14px}
+
 @media (max-width:860px){
   .hero .wrap,.split,.panel{grid-template-columns:1fr}
   .callout{grid-template-columns:1fr}
   .step{grid-template-columns:auto 1fr}
   .step .btn{grid-column:2;justify-self:start}
   .brand span.t{display:none}
+  .lab,.logic,.tq{grid-template-columns:1fr}
+  .fnode{grid-template-columns:1fr}
+  .fyes{display:none}
+  .res3{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -204,6 +263,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-bet
       <a href="#kuis">Kuis</a>
       <a href="#lkpd">LKPD</a>
       <a href="#flowchart">Flowchart</a>
+      <a href="#percabangan">Percabangan</a>
       <a href="#konsep">Ringkasan</a>
     </nav>
     <button class="theme-btn" id="themeBtn" type="button" aria-label="Ganti tema terang atau gelap">Tema</button>
@@ -339,7 +399,74 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-bet
   </div>
 </section>
 
-<section id="konsep">
+<section id="percabangan">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Memahami percabangan dari nol</h2>
+      <p>Percabangan tidak hanya dipakai kasir koperasi. Hampir semua aplikasi yang kamu pakai memilih jalur berdasarkan syarat, dan kamu bisa mencobanya langsung di bawah ini.</p>
+    </div>
+
+    <p style="max-width:46em;margin-bottom:22px">Biasanya program berjalan lurus dari baris paling atas ke bawah. Percabangan menaruh persimpangan di jalan itu: program memeriksa sebuah syarat, lalu memilih jalur sesuai hasilnya.</p>
+    <div class="mist" style="margin-top:0">
+      <div><b>Syarat</b><span>Pertanyaan yang jawabannya hanya benar (True) atau salah (False), misalnya <code>suhu &gt;= 35</code>.</span></div>
+      <div><b>Jalur</b><span>Blok kode yang dijalankan kalau syaratnya benar. Di Python ditandai titik dua dan indentasi.</span></div>
+      <div><b>Satu pilihan</b><span>Pada if-elif-else hanya satu jalur yang berjalan: yang syaratnya pertama kali benar.</span></div>
+    </div>
+    <p style="margin-top:20px;color:var(--muted);max-width:46em">Kamu sudah sering bertemu percabangan: login (kata sandi benar?), game (nyawa habis?), ATM (saldo cukup?), ojek online (jarak berapa kilometer?), dan peringatan baterai HP.</p>
+
+    <h3 class="sub-h">Coba sendiri: persimpangan program</h3>
+    <p class="sub-p">Pilih skenario, geser nilainya, dan lihat jalur mana yang dipilih. Lalu nyalakan "balik urutan" untuk melihat kenapa urutan syarat penting.</p>
+    <div class="lab">
+      <div>
+        <div class="seg" id="scen" role="group" aria-label="Pilih skenario"></div>
+        <div class="rng-label"><span id="slLabel">Suhu</span><b id="slVal">30</b></div>
+        <input class="rng" id="slider" type="range" min="0" max="45" value="30" aria-labelledby="slLabel">
+        <label class="member" style="margin:6px 0 0"><input type="checkbox" id="flip"> Balik urutan syarat (lihat apa yang salah)</label>
+        <div class="flow" id="flow"></div>
+      </div>
+      <div>
+        <div class="codepanel" style="margin-top:0"><div class="ttl">Kodenya, ikut berubah saat kamu menggeser</div><div id="labCode"></div></div>
+        <div class="verdict" id="verdict" aria-live="polite"></div>
+      </div>
+    </div>
+
+    <h3 class="sub-h">Dua syarat sekaligus: and, or, not</h3>
+    <p class="sub-p">Kadang satu syarat tidak cukup. Nyalakan atau matikan A dan B, lalu lihat hasil tiap operator logika.</p>
+    <div class="logic">
+      <div class="toggles">
+        <label class="tg"><span>A: usia 17 tahun ke bawah</span><input type="checkbox" id="lgA" checked></label>
+        <label class="tg"><span>B: membawa kartu pelajar</span><input type="checkbox" id="lgB"></label>
+        <pre class="code" style="font-size:.85rem;padding:14px" data-code="if usia &lt;= 17 and kartu == &quot;ya&quot;:
+    tarif = 5000
+else:
+    tarif = 10000"></pre>
+      </div>
+      <div>
+        <div class="res3" aria-live="polite">
+          <div class="rbox" id="rAnd"><code>A and B</code><div class="v"></div></div>
+          <div class="rbox" id="rOr"><code>A or B</code><div class="v"></div></div>
+          <div class="rbox" id="rNot"><code>not A</code><div class="v"></div></div>
+        </div>
+        <p class="sub-p" style="margin:16px 0 0" id="lgSent"></p>
+      </div>
+    </div>
+
+    <h3 class="sub-h">Tebak keluarannya</h3>
+    <p class="sub-p">Baca kodenya, tebak apa yang dicetak, lalu cek alasannya. Lima soal, tanpa nilai.</p>
+    <div class="tq" id="tq"></div>
+
+    <h3 class="sub-h">Kesalahan yang sering terjadi</h3>
+    <div class="mist">
+      <div><b>Memakai = untuk membandingkan</b><span><code>if x = 5:</code> salah. Gunakan <code>if x == 5:</code>.</span></div>
+      <div><b>Lupa titik dua</b><span>Setiap if, elif, dan else harus diakhiri <code>:</code>.</span></div>
+      <div><b>Indentasi tidak rapi</b><span>Blok di bawah syarat harus menjorok 4 spasi, kalau tidak muncul IndentationError.</span></div>
+      <div><b>Urutan elif terbalik</b><span>Syarat longgar di atas menghentikan pemeriksaan lebih awal. Mulai dari yang paling ketat.</span></div>
+      <div><b>Salah nilai batas</b><span>Beda <code>&gt;</code> dan <code>&gt;=</code> mengubah hasil tepat di angka batas, misalnya 50.000.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="konsep" class="sec-alt">
   <div class="wrap">
     <div class="sec-head">
       <h2>Ringkasan konsep</h2>
@@ -515,6 +642,98 @@ print(persen)"></pre>
       if(e.key==='ArrowLeft'){ var m=(i-1+tabs.length)%tabs.length; pick(m); tabs[m].focus(); }
     });
   });
+  /* ---------- lab percabangan umum ---------- */
+  var OPS={'>=':function(a,b){return a>=b;},'<=':function(a,b){return a<=b;},'>':function(a,b){return a>b;},'<':function(a,b){return a<b;}};
+  var SC=[
+    {name:'Cuaca',v:'suhu',label:'Suhu (°C)',min:0,max:45,def:30,
+     br:[['>=',35,'Panas terik: bawa topi dan air minum'],['>=',28,'Hangat: pakai baju tipis'],['>=',20,'Sejuk: bawa jaket tipis']],els:'Dingin: pakai jaket tebal'},
+    {name:'Baterai HP',v:'baterai',label:'Baterai (%)',min:0,max:100,def:25,
+     br:[['<=',10,'Aktifkan mode hemat daya'],['<=',30,'Tampilkan peringatan baterai lemah'],['<',100,'Pemakaian normal']],els:'Baterai penuh: cabut charger'},
+    {name:'Nilai ujian',v:'nilai',label:'Nilai',min:0,max:100,def:82,
+     br:[['>=',90,'A: sangat baik'],['>=',80,'B: baik'],['>=',75,'C: lulus']],els:'Remedial'}
+  ];
+  var cur=0, slider=document.getElementById('slider'), flip=document.getElementById('flip');
+  var seg=document.getElementById('scen');
+  SC.forEach(function(s,i){
+    var b=document.createElement('button'); b.type='button'; b.textContent=s.name; b.setAttribute('aria-pressed',String(i===0));
+    b.addEventListener('click',function(){
+      cur=i; slider.min=s.min; slider.max=s.max; slider.value=s.def; flip.checked=false;
+      [].forEach.call(seg.children,function(c,k){ c.setAttribute('aria-pressed',String(k===i)); });
+      lab();
+    });
+    seg.appendChild(b);
+  });
+  function firstMatch(list,x){ for(var i=0;i<list.length;i++){ if(OPS[list[i][0]](x,list[i][1])) return i; } return -1; }
+  function lab(){
+    var sc=SC[cur], x=+slider.value, br=sc.br.slice();
+    if(flip.checked) br.reverse();
+    var idx=firstMatch(br,x);
+    var ci=firstMatch(sc.br,x), correct=ci<0?sc.els:sc.br[ci][2], shown=idx<0?sc.els:br[idx][2];
+    document.getElementById('slLabel').textContent=sc.label;
+    document.getElementById('slVal').textContent=x;
+    var f='', c='<div class="cl" style="opacity:.8"><span>'+hl(sc.v+' = '+x)+'</span><span></span></div>';
+    br.forEach(function(b,i){
+      var st=idx<0?'salah':(i<idx?'salah':(i===idx?'benar':'lewat'));
+      var lbl=st==='salah'?'salah, lanjut':(st==='benar'?'benar, berhenti':'dilewati');
+      var cond=sc.v+' '+b[0]+' '+b[1];
+      f+='<div class="fstep '+st+'"><div class="fnode"><div class="fcond">'+esc(cond)+' ?</div><div class="fyes">Ya</div><div class="fres">'+esc(b[2])+'</div></div><div class="fno">Tidak</div></div>';
+      c+='<div class="cl '+st+'"><span>'+hl((i===0?'if ':'elif ')+cond+':')+'\n'+hl('    print("'+b[2]+'")')+'</span><span class="st">'+lbl+'</span></div>';
+    });
+    var es=idx<0?'benar':'lewat';
+    f+='<div class="fstep '+es+'"><div class="fnode"><div class="fcond">selain itu (else)</div><div class="fyes">maka</div><div class="fres">'+esc(sc.els)+'</div></div></div>';
+    c+='<div class="cl '+es+'"><span>'+hl('else:')+'\n'+hl('    print("'+sc.els+'")')+'</span><span class="st">'+(idx<0?'dijalankan':'dilewati')+'</span></div>';
+    document.getElementById('flow').innerHTML=f;
+    document.getElementById('labCode').innerHTML=c;
+    var v=document.getElementById('verdict'), msg, warn=false;
+    if(flip.checked && shown!==correct){ msg='<b>Hasilnya salah.</b> Urutan ini mencetak "'+esc(shown)+'", padahal seharusnya "'+esc(correct)+'". Syarat yang lebih longgar di atas membuat pemeriksaan berhenti terlalu awal.'; warn=true; }
+    else if(flip.checked){ msg='<b>Kebetulan hasilnya sama untuk nilai ini.</b> Geser ke nilai yang lebih tinggi atau lebih rendah untuk menemukan kesalahannya.'; warn=true; }
+    else { msg='Python memeriksa dari atas dan berhenti di syarat pertama yang benar. Hasil: <b>'+esc(shown)+'</b>.'; }
+    v.className='verdict'+(warn?' warn':''); v.innerHTML=msg;
+  }
+  slider.addEventListener('input',lab); flip.addEventListener('change',lab); lab();
+
+  /* ---------- and / or / not ---------- */
+  var lgA=document.getElementById('lgA'), lgB=document.getElementById('lgB');
+  function setBox(id,val){ var b=document.getElementById(id); b.className='rbox '+(val?'t':'f'); b.querySelector('.v').textContent=val?'Benar':'Salah'; }
+  function logic(){
+    var a=lgA.checked, b=lgB.checked;
+    setBox('rAnd',a&&b); setBox('rOr',a||b); setBox('rNot',!a);
+    document.getElementById('lgSent').innerHTML='Pada kode di samping, tarif Rp5.000 hanya berlaku kalau A <b>and</b> B benar: sekarang tarifnya <b>'+(a&&b?'Rp5.000':'Rp10.000')+'</b>. Dengan <code>or</code>, salah satu benar saja sudah cukup.';
+  }
+  lgA.addEventListener('change',logic); lgB.addEventListener('change',logic); logic();
+
+  /* ---------- tebak keluarannya ---------- */
+  var QZ=[
+    {code:'x = 10\nif x > 5:\n    print("A")\nelse:\n    print("B")',opts:['A','B','A lalu B','Error'],ans:0,why:'10 > 5 benar, jadi blok if dijalankan dan else dilewati.'},
+    {code:'n = 75\nif n > 75:\n    print("Lulus")\nelse:\n    print("Remedial")',opts:['Lulus','Remedial','Lulus lalu Remedial','Tidak ada keluaran'],ans:1,why:'75 > 75 salah karena sama dengan bukan lebih dari. Dengan >= hasilnya baru "Lulus". Inilah pentingnya nilai batas.'},
+    {code:'suhu = 30\nif suhu >= 25:\n    print("Panas")\nelif suhu >= 35:\n    print("Sangat panas")\nelse:\n    print("Normal")',opts:['Panas','Sangat panas','Normal','Panas dan Sangat panas'],ans:0,why:'Syarat pertama sudah benar, jadi pemeriksaan berhenti. Syarat elif tidak pernah diperiksa, dan urutan ini membuat "Sangat panas" mustahil muncul.'},
+    {code:'n = 90\nif n >= 80:\n    print("A")\nif n >= 70:\n    print("B")',opts:['A','B','A lalu B (dua baris)','Tidak ada keluaran'],ans:2,why:'Dua if yang terpisah diperiksa semuanya. Kalau kedua syarat benar, kedua blok berjalan. Dengan elif, hanya yang pertama.'},
+    {code:'usia = 15\nkartu = "tidak"\nif usia <= 17 and kartu == "ya":\n    print(5000)\nelse:\n    print(10000)',opts:['5000','10000','5000 lalu 10000','Error'],ans:1,why:'Operator and butuh dua-duanya benar. Usia memenuhi, tetapi kartu == "ya" salah, jadi jalur else yang dijalankan.'}
+  ];
+  var tq=document.getElementById('tq'), qi=0, score=0, done=false;
+  function qRender(){
+    if(qi>=QZ.length){
+      tq.innerHTML='<div class="tq-top"><span>Selesai</span></div><div style="grid-column:1/-1"><h3 style="margin-bottom:8px">Skormu '+score+' dari '+QZ.length+'</h3><p style="color:var(--muted);margin-bottom:14px">'+(score>=4?'Kamu sudah paham alur percabangan. Lanjut ke LKPD dan coba menulis kodenya sendiri.':'Baca lagi bagian yang salah, lalu coba lagi. Geser skenario di atas untuk melihat alurnya.')+'</p><button class="btn small primary" type="button" id="qAgain">Ulangi</button></div>';
+      document.getElementById('qAgain').addEventListener('click',function(){ qi=0; score=0; qRender(); });
+      return;
+    }
+    var q=QZ[qi]; done=false;
+    var o=''; q.opts.forEach(function(t,i){ o+='<button class="opt" type="button" data-i="'+i+'">'+esc(t)+'</button>'; });
+    tq.innerHTML='<div class="tq-top"><span>Soal '+(qi+1)+' dari '+QZ.length+'</span><span>Skor '+score+'</span></div>'+
+      '<pre class="code" id="qCode"></pre>'+
+      '<div><p style="font-weight:700;margin-bottom:12px">Apa yang dicetak program ini?</p><div class="opts" id="qOpts">'+o+'</div><div id="qFb" aria-live="polite"></div></div>';
+    document.getElementById('qCode').innerHTML=hl(q.code);
+    document.getElementById('qOpts').addEventListener('click',function(e){
+      var b=e.target.closest('.opt'); if(!b||done) return; done=true;
+      var pick=+b.dataset.i, ok=pick===q.ans; if(ok) score++;
+      [].forEach.call(document.querySelectorAll('#qOpts .opt'),function(x,i){ x.disabled=true; if(i===q.ans) x.classList.add('right'); else if(i===pick) x.classList.add('wrong'); });
+      document.getElementById('qFb').innerHTML='<div class="fb"><b>'+(ok?'Tepat.':'Belum tepat.')+'</b> '+esc(q.why)+'</div><div class="actions"><button class="btn small hi" type="button" id="qNext">'+(qi===QZ.length-1?'Lihat skor':'Soal berikutnya')+'</button></div>';
+      document.getElementById('qNext').addEventListener('click',function(){ qi++; qRender(); });
+      document.getElementById('qNext').focus();
+    });
+  }
+  qRender();
+
 })();
 </script>
 </body>

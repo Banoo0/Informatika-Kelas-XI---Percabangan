@@ -1,6 +1,6 @@
 [Kasir Koperasi Pintar](#atas)
 
-[Urutan belajar](#urutan) [Materi](#materi) [Kuis](#kuis) [LKPD](#lkpd) [Flowchart](#flowchart) [Ringkasan](#konsep)
+[Urutan belajar](#urutan) [Materi](#materi) [Kuis](#kuis) [LKPD](#lkpd) [Flowchart](#flowchart) [Percabangan](#percabangan) [Ringkasan](#konsep)
 
 Informatika kelas XI
 
@@ -126,6 +126,62 @@ Pakai bentuk yang tepat saat menggambar alur kasir. Ketuk gambar untuk memperbes
 **Jajar genjang = input dan output**Dipakai untuk membaca total belanja dan menampilkan total bayar.
 
 **Persegi panjang = proses**Dipakai untuk menghitung, misalnya bayar = total dikurangi diskon.
+
+## Memahami percabangan dari nol
+
+Percabangan tidak hanya dipakai kasir koperasi. Hampir semua aplikasi yang kamu pakai memilih jalur berdasarkan syarat, dan kamu bisa mencobanya langsung di bawah ini.
+
+Biasanya program berjalan lurus dari baris paling atas ke bawah. Percabangan menaruh persimpangan di jalan itu: program memeriksa sebuah syarat, lalu memilih jalur sesuai hasilnya.
+
+**Syarat**Pertanyaan yang jawabannya hanya benar (True) atau salah (False), misalnya `suhu >= 35`.
+
+**Jalur**Blok kode yang dijalankan kalau syaratnya benar. Di Python ditandai titik dua dan indentasi.
+
+**Satu pilihan**Pada if-elif-else hanya satu jalur yang berjalan: yang syaratnya pertama kali benar.
+
+Kamu sudah sering bertemu percabangan: login (kata sandi benar?), game (nyawa habis?), ATM (saldo cukup?), ojek online (jarak berapa kilometer?), dan peringatan baterai HP.
+
+### Coba sendiri: persimpangan program
+
+Pilih skenario, geser nilainya, dan lihat jalur mana yang dipilih. Lalu nyalakan "balik urutan" untuk melihat kenapa urutan syarat penting.
+
+Suhu**30**
+
+[ ] Balik urutan syarat (lihat apa yang salah)
+
+Kodenya, ikut berubah saat kamu menggeser
+
+### Dua syarat sekaligus: and, or, not
+
+Kadang satu syarat tidak cukup. Nyalakan atau matikan A dan B, lalu lihat hasil tiap operator logika.
+
+A: usia 17 tahun ke bawah[x] B: membawa kartu pelajar[ ]
+
+```
+
+```
+
+`A and B`
+
+`A or B`
+
+`not A`
+
+### Tebak keluarannya
+
+Baca kodenya, tebak apa yang dicetak, lalu cek alasannya. Lima soal, tanpa nilai.
+
+### Kesalahan yang sering terjadi
+
+**Memakai = untuk membandingkan**`if x = 5:` salah. Gunakan `if x == 5:`.
+
+**Lupa titik dua**Setiap if, elif, dan else harus diakhiri `:`.
+
+**Indentasi tidak rapi**Blok di bawah syarat harus menjorok 4 spasi, kalau tidak muncul IndentationError.
+
+**Urutan elif terbalik**Syarat longgar di atas menghentikan pemeriksaan lebih awal. Mulai dari yang paling ketat.
+
+**Salah nilai batas**Beda `>` dan `>=` mengubah hasil tepat di angka batas, misalnya 50.000.
 
 ## Ringkasan konsep
 
