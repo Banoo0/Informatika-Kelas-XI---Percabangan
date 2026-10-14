@@ -1,6 +1,10 @@
 [Kasir Koperasi Pintar](#atas)
 
-[Urutan belajar](#urutan) [Materi](#materi) [Kuis](#kuis) [LKPD](#lkpd) [Flowchart](#flowchart) [Percabangan](#percabangan) [Ringkasan](#konsep)
+**Daftar bagian**
+
+[Urutan belajar](#urutan) [Materi interaktif](#materi) [Kuis pembuka](#kuis) [LKPD kelompok](#lkpd) [Bentuk flowchart](#flowchart) [Memahami percabangan](#percabangan) [Ringkasan konsep](#konsep)
+
+0 dari 6 langkah selesai
 
 Informatika kelas XI
 
